@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+
+
+html::-webkit-scrollbar{
+    width: 0.6rem;
+}
+html::-webkit-scrollbar-thumb {
+    background: #BB9033;
+}
+html::-webkit-scrollbar-track {
+    background: #F5F1EE;
+}
+body {
+    overflow-x: hidden; 
+    width: 100vw; 
+}
+.img-logo {
+    height:60px;
+    width: 62px;
+    margin-top:5px;
+}
+.prof-image{
+    height:50px;
+    width: 52px;
+    margin-top:10px;
+    border-radius:50px;
+    margin-left:340px;
+
+}
+.logo-heading {
+    color:#BB9033;
+    font-family:"";
+    font-size:22px;
+    margin-top:10px;
+}
+.navbar-banner {
+    background-color:#F5F1EE;
+    background-size:cover;
+
+}
+
+.nav-item-color{
+    color:#BB9033;
+    font-family:'Poppins', monospace;
+    font-style:italic;
+    font-size:20px;
+    margin-right:13px;
+    transition: color 0.3s;
+}
+.nav-item-color:hover {
+    color:#8F6E26;
+}
+
+.nav-item-color.active {
+    color: #BB9033;
+}
+#hire-specialists{
+    white-space:nowrap;
+}
+.btn-login{
+    background-color:#BB9033;
+    border-radius:6px;
+    border-width:0px;
+    color:#F5F1EE;
+    height:45px;
+    width:75px;
+    position: relative;
+    background: #BB9033;
+    font-size: 17px;
+    font-weight: 500;
+    color: #F5F1EE;
+    border: 3px solid #BB9033;
+    border-radius: 8px;
+    box-shadow: 0 0 0 #BB9033;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    margin-left:340px;
+    margin-top:12px;
+}
+.btn-login:hover {
+    background: #BB9033;
+    color: #BB9033;
+    box-shadow: 0 0 25px #BB9033;
+    transform: scale(1.1);
+}
+/*---------------------------------why-choose-us---------------------------------*/
+.bg-image{
+    background-color:#ffffff;
+    background-size:cover;
+    height:140vh
+  }
+
+.main-heading{
+    font-family:'Poppins', monospace;
+    font-size:30px;
+    color:#8F6E26;
+    font-weight:bold;
+}
+.description{
+    font-family:'Poppins', monospace;
+    font-size:18px;
+    color:#BB9033;
+}
+.img{
+    height:60px;
+    width:60px;
+}
+.carousel-dimensions{
+    height:300px;
+    margin-top:30px;
+}
+.how-it-works-img{
+    border-radius:10px;
+    margin:30px;
+    height:300px;
+    width:300px;
+}
+/*---------------------------------Mentor-Card---------------------------------*/
+.mentor-card{
+    display: inline-block;
+    border-radius:10px;
+    background-color:#ffffff;
+    margin:10px;
+    width:350px;
+    margin-right: 20px;
+    right: 90px;
+    text-align:center;
+}
+
+.mentor-heading{
+    font-family:'Poppins', monospace;
+    font-style:italic;
+    font-size:35px;
+    color:#8F6E26;
+    font-weight:bold;
+}
+#book{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.2s;
+}
+
+.outer{
+    transform: translateY(20px);
+    transition: 0.5s;
+}
+
+.zoom{
+    transition: transform 0.5s;
+}
+
+.zoom:hover{
+    transform: scale(1.1);
+}
+
+.mentor-card:hover .outer{
+    transform: translateY(0);
+    transition: 0.5s;
+}
+
+.mentor-card:hover #book{
+    opacity: 1;
+    transform: translateY(0);
+    transition: all .5s;
+}
+
+
+
+.bg-mentor-container{
+    background-color:#12d0ca;
+    border-radius:15px;
+}
+.mentor-img{
+    border-radius:20px;
+    height:150px;
+    width:150px;
+}
+.text-bold{
+    font-weight:bold;
+    color:#8F6E26;
+    font-size:18px;
+}
+.description-2{
+    font-family:'Poppins', monospace;
+    font-size:18px;
+    color:#BB9033;
+}
+
+.mentor-rating{
+    height:40px;
+    width:170px;
+    margin-right:40px;
+    margin-top:20px
+}
+.mentor-rating-img{
+    height:35px;
+    width:170px;
+    margin-right:60px; 
+}
+
+/*---------------------------------Modal-Card---------------------------------*/
+.modal-heading{
+    font-weight:bold;
+    color:#8F6E26;
+    font-size:25px;
+}
+
+/*---------------------------------Contact-us---------------------------------*/
+.contact-us-bg{
+    background-color: #363d45;
+    background-size: cover;
+}
