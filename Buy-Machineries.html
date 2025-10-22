@@ -6,159 +6,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=egde">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="x-icon" href="https://i.postimg.cc/ry3M10jS/Hackathon-logo-3.png">
-    <link rel="stylesheet" href="uzhavan.css">
+    <link rel="stylesheet" href="Hire-Specialists.css">
     <title>Uzhavan Sync</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, maximum-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"/>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"/> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"/>
+    <script src="./dashboard/dashboard-farmer.js"></script>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-banner fixed-top">
-        <div class="d-flex flex-row justify-content-start">
-            <img src="https://i.postimg.cc/ry3M10jS/Hackathon-logo-3.png" class="img-logo"/>
-            <h1 class="logo-heading ">Uzhavan Sync</h1>   
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav" style="margin-left:380px;">
-            <li class="nav-item">
-                <a class="nav-link nav-item-color"  href="/dist/index.html">ChatBot</a>
-              </li>
-            <li class="nav-item">
-              <a class="nav-link nav-item-color" id="hire-specialists" href="./Hire-Specialists.html">Hire Specialists</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link nav-item-color dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Machineries
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="./Rent-Machineries.html">Rent Machineries</a>
-                <a class="dropdown-item" href="./Buy-Machineries.html">Buy Machineries</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Add Machineries</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link nav-item-color dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Tools
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="">Buy Tools</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Add Tools</a>
+<body id="body-pd">
+    <header class="header" id="header">
+        <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+        
+    </header>
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <div> <a href="#" class="nav_logo" style="text-decoration:none;"> <img src="https://i.postimg.cc/CLxSGK1v/Hackathon-logo-3.png" class="img-logo" /> <span class="nav_logo-name">
+                UZHAVAN SYNC
+            </span> </a>
+                <div class="nav_list"> 
+                    <a href="#profile" class="nav_link" style="text-decoration:none;"> <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="" style="width:27px; height:27px; border-radius:15px">  <span class="nav_name">Profile</span> </a>
+
+                    <a href="#mentor-container" class="nav_link active" style="text-decoration:none;"> <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+                    </svg> <span class="nav_name">Search Mentors</span></a> 
+                  
+                    <a href="#" id="Upcoming-Slots" class="nav_link" style="text-decoration:none;" onclick="UpcomingSlots()"> <svg xmlns="http://www.w3.org/2000/svg"  width="25" height="25" fill="currentColor" class="bi bi-app-indicator" viewBox="0 0 16 16">
+                    <path d="M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5V8a.5.5 0 0 1 1 0v2.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 1 10.5v-5A4.5 4.5 0 0 1 5.5 1H8a.5.5 0 0 1 0 1z"/><path d="M16 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                    </svg> <span class="nav_name">Upcoming Slots</span> </a> 
+                    
+                    <a href="#" id="Join-session" class="nav_link" style="text-decoration:none;" onclick="UpcomingSlots2()"> <svg xmlns="http://www.w3.org/2000/svg"  width="25" height="25" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
+                    </svg> <span class="nav_name">Join Session</span> </a> 
+                    
+                    <a href="./videocall.html" id="Meet-your-mentor" class="nav_link" style="text-decoration:none;"> <svg xmlns="http://www.w3.org/2000/svg"  width="25" height="25" fill="currentColor" class="bi bi-camera-video-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2z"/>
+                    </svg> <span class="nav_name">Meet Your Mentor</span> </a> 
+                    
+                    <a href="#" id="Chat-with-mentor" class="nav_link" style="text-decoration:none;" onclick="UpcomingSlots4()"> <svg xmlns="http://www.w3.org/2000/svg"  width="25" height="25" fill="currentColor" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
+                    <path d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                  </svg> <span class="nav_name">Chat With Mentor</span> </a> 
+                
+                  <a href="./notes.html" id="Join-session" class="nav_link" style="text-decoration:none;"> <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-card-heading" viewBox="0 0 16 16">
+                    <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"/>
+                    <path d="M3 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5m0-5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5z"/>
+                  </svg> <span class="nav_name">Notes</span> </a>
+
                 </div>
-              </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link nav-item-color dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Market
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="./Agri-Products.html">Agri Products</a>
-                <a class="dropdown-item" href="">Fertilizers</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Add Products</a>
-              </div>
-            </li>
-           </ul>
-        </div>
-        <button class = "btn-login"><a  style="color:#fbdc99;" href="./login.html" >LOGIN</a></button>
-      </nav>
-    
-      <div id="carousel-home-page" class="carousel slide pt-3" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner carousel-dimensions">
-          <div class="carousel-item active">
-            <img
-              src="./images/Screenshot 2025-03-23 104012.png"
-              class="d-block w-100"
-              alt="..."
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-            src="./images/Screenshot 2025-03-23 104012.png"
-              class="d-block w-100"
-              alt="..."
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-            src="./images/Screenshot 2025-03-23 104012.png"
-              class="d-block w-100"
-              alt="..."
-            />
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carousel-home-page" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carousel-home-page" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+            </div> 
+        </nav>
     </div>
-     
-    <div id="how-it-works-container" class="d-flex flex-row justify-content-center bg-image-2">
-        <div class="text-center mt-3 pt-5">
-            <h1 class="mentor-heading">How UZHAVAN SYNC Works</h1>
-            <P class="description">Smart farming, seamless trade! Get expert insights, optimize resources, and sell directly—boosting yield & profits effortlessly!</P>
-        </div>
-    </div>
-
-    <div class="bg-image pt-3">
-        <div class="text-center mt-5 mb-5 pt-5">
-            <h1 class="main-heading">Why choose us?</h1>
-            <p class="description">Empowering farmers with expert guidance, smart solutions, and direct market access. </br>
-                our platform connects you with the right resources and guidance...</p>
-        </div>
-        <div id="features-container">
-        <div class="d-flex lex-row justify-content-center pt-5">
-            <div class="ml-3">
-                <img src="https://static.vecteezy.com/system/resources/previews/008/897/354/non_2x/solution-line-icon-free-vector.jpg" class="img mt-3 mb-3"/>
-                <h1 class="main-heading">Smart Agriculture Solutions for Farmers</h1>
-                <p class="description">Empowering farmers with cutting-edge technology and insights to enhance productivity and sustainability. From precision farming to smart irrigation,</br> we provide tailored solutions for modern agriculture.</p>
-            </div>
-            <div class="ml-3">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW82sxfjeYDCQnLIdJqgdNOMwVaaWIskvuZw&s" class="img mt-3 mb-3"/>
-                <h1 class="main-heading">Optimized Fertilizer Usage for Higher Yield</h1>
-                <p class="description">Utilize data-driven recommendations to apply the right fertilizers in the right amounts. Improve soil health, maximize crop output, and ensure sustainable farming practices.</p>
-            </div>
-            <div class="ml-3">
-                <img src="https://static.thenounproject.com/png/7309717-200.png" class="img mt-3 mb-3"/>
-                <h1 class="main-heading">Direct Market Access for Farmers</h1>
-                <p class="description">Eliminate middlemen and connect directly with buyers through a digital marketplace. Increase profitability and ensure fair pricing for your agricultural produce.</p>
-            </div>
-        </div>
-
-        <div class="d-flex lex-row justify-content-center">
-            <div class="ml-3">
-                <img src="https://static.thenounproject.com/png/4653317-200.png" class="img mt-3"/>
-                <h1 class="main-heading">Seamless Agricultural Guidance, Anytime, Anywhere</h1>
-                <p class="description">Access expert farming advice and best practices at your convenience. Whether in the field or at home, get insights on crop management, pest control, and more.</p>
-            </div>
-            <div class="ml-3">
-                <img src="https://st3.depositphotos.com/1985863/13407/v/450/depositphotos_134075560-stock-illustration-user-friendly-culture-illustration-design.jpg" class="img mt-3"/>
-                <h1 class="main-heading">User-Friendly Platform for Farmers and Retailers</h1>
-                <p class="description">Navigate an intuitive platform designed for easy access to agricultural resources, market trends, and expert recommendations, ensuring a smooth and efficient experience.</p>
-            </div>
-            <div class="ml-5">
-                <img src="https://static.thenounproject.com/png/1326881-200.png" class="img mt-3"/>
-                <h1 class="main-heading">Boost Productivity with Modern Farming Techniques</h1>
-                <p class="description">Leverage advanced agricultural methods, weather-based recommendations, and real-time market analytics to enhance your farming efficiency and profitability.</p>
-            </div>
-        </div>
-        </div>
-    </div>
-    
     <div id="mentor-container" class="bg-image-2">
         <div class="d-flex flex-row justify-content-center pt-5">
-            <h1 class="mentor-heading">Trending Machineries :</h1>
+            <h1 class="mentor-heading">Buy Machineries:</h1>
         </div>
         <div class="d-flex flex-row justify-content-center">
             <div class="mentor-card shadow p-3 ml-3 mb-3">
@@ -385,23 +290,19 @@
                     </div>
             </div>
         </div>
-        
-        <div class="d-flex flex-row justify-content-center">
-            <h1 class="mentor-heading">Top Deals On Agri Products :</h1>
-        </div>
         <div class="d-flex flex-row justify-content-center mb-5">
             
-            <div class="mentor-card shadow p-3 ml-3 mb-3 mt-5">
+            <div class="mentor-card shadow p-3 ml-3 mb-3">
                 <div class="outer">
-                    <img src="./images/Barley.jpeg" class="mentor-img shadow mb-3"/>
+                  <img src="./images/Oil machine.jpeg" class="mentor-img shadow mb-3"/>
                     <div class="text-center">
-                        <p class="description-2"><span class ="text-bold">Barley</span></p>
-                    </div>
+                        <p class="description-2"><span class ="text-bold">Oil machine</span></p>
+                    </div>  
                 </div>
                 
-                <div class="d-flex flex-row justify-content-center">
+                <div class="d-flex flex-row justify-content-center" id="book">
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-6-Modal" id="book">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-6-Modal" >
                         Buy
                     </button>
                 </div>
@@ -413,7 +314,7 @@
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">
                                 <div class="text-center mr-3">
-                                    <p class="description-2"><span class ="text-bold">Prof. Rohit Budhiraja</span></p>
+                                    <p class="description-2"><span class ="modal-heading">Oil machine</span></p>
                                 </div>
                             </h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -422,11 +323,10 @@
                         </div>
                         <div class="modal-body">
                             <div class="d-flex flex-row justify-content-start">
-                                <img src="./images/Barley.jpeg" class="mentor-img shadow ml-3 mb-3"/>
-                                <div class="mentor-rating">
+                                <img src="./images/Oil machine.jpeg" class="mentor-img shadow ml-3 mb-3"/>
                             </div>
                             <p class="text-bold">Price</p>
-                            <li class="description-2">Rs. 150 per KG</li>
+                            <li class="description-2">₹3000</li>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-primary">
@@ -436,13 +336,12 @@
                         </div>
                     </div>
                     </div>
-                    </div>
             </div>
-            <div class="mentor-card shadow p-3 ml-3  mb-3 mt-5">
+            <div class="mentor-card shadow p-3 ml-3  mb-3">
                 <div class="outer">
-                    <img src="./images/Channa.jpeg" class="mentor-img shadow mb-3"/>
+                    <img src="images/Driller.jpeg" class="mentor-img shadow mb-3"/>
                     <div class="text-center">
-                        <p class="description-2"><span class ="text-bold">Channa</span></br></p>
+                        <p class="description-2"><span class ="text-bold">Driller</span></br></p>
                     </div>
                 </div>
                 
@@ -460,7 +359,7 @@
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">
                                 <div class="text-center mr-3">
-                                    <p class="description-2"><span class ="text-bold">Channa</span></p>
+                                    <p class="description-2"><span class ="text-bold">Driller</span></p>
                                 </div>
                             </h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -468,11 +367,11 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <div class="d-flex flex-row justify-content-start">
-                                <img src="./images/Channa.jpeg" class="mentor-img shadow ml-3 mb-3"/>
+                            <div class="d-flex flex-row justify-content-center">
+                                <img src="images/Driller.jpeg" class="mentor-img shadow ml-3 mb-3"/>
                             </div>
                             <p class="text-bold">Price</p>
-                            <li class="description-2">Rs. 85 per KG</li>
+                            <li class="description-2">₹2000</li>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-primary">
@@ -483,11 +382,55 @@
                     </div>
                     </div>
             </div>
-            <div class="mentor-card shadow p-3 ml-3  mb-3 mt-5">
+            <div class="mentor-card shadow p-3 ml-3  mb-3">
                 <div class="outer">
-                    <img src="./images/Moong.jpeg" class="mentor-img shadow mb-3"/>
+                    <img src="Machineries/$ row Corn Planter.jpeg" class="mentor-img shadow mb-3"/>
                     <div class="text-center">
-                        <p class="description-2"><span class ="text-bold">Moong</span></br></p>
+                        <p class="description-2"><span class ="text-bold">Row Corn Planter</span></p>
+                    </div> 
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-8-Modal" id="book">
+                        Buy
+                    </button>
+                </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="mentor-8-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                <div class="text-center mr-3">
+                                    <p class="description-2"><span class ="text-bold">Row Corn Planter</span></p>
+                                </div>
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex flex-row justify-content-center">
+                                <img src="./Machineries/$ row Corn Planter.jpeg" class="mentor-img shadow ml-3 mb-3"/>
+                            </div>
+                            <p class="text-bold">Price</p>
+                            <li class="description-2">₹1.5 Lakh</li>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">
+                                <a class= "text-white" href="./login/login.html">Buy</a>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+            <div class="mentor-card shadow p-3 ml-3  mb-3">
+                <div class="outer">
+                    <img src="Machineries/Dozer Roller.jpeg" class="mentor-img shadow mb-3"/>
+                    <div class="text-center">
+                        <p class="description-2"><span class ="text-bold">Dozer Roller</span></br></p>
                     </div>
                 </div>
                 
@@ -505,7 +448,7 @@
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">
                                 <div class="text-center mr-3">
-                                    <p class="description-2"><span class ="text-bold">Moong</span></p>
+                                    <p class="description-2"><span class ="text-bold">Dozer Roller</span></p>
                                 </div>
                             </h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -513,11 +456,11 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <div class="d-flex flex-row justify-content-start">
-                                <img src="./images/Channa.jpeg" class="mentor-img shadow ml-3 mb-3"/>
+                            <div class="d-flex flex-row justify-content-center">
+                                <img src="Machineries/Dozer Roller.jpeg" class="mentor-img shadow ml-3 mb-3"/>
                             </div>
                             <p class="text-bold">Price</p>
-                            <li class="description-2">Rs. 135 per KG</li>
+                            <li class="description-2">₹83,000</li>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-primary">
@@ -528,56 +471,11 @@
                     </div>
                     </div>
             </div>
-            <div class="mentor-card shadow p-3 ml-3  mb-3 mt-5">
+            <div class="mentor-card shadow p-3 ml-3  mb-3">
                 <div class="outer">
-                    <img src="./images/wheat.jpeg" class="mentor-img shadow mb-3"/>
+                    <img src="Machineries/Excavators.jpeg" class="mentor-img shadow mb-3"/>
                     <div class="text-center">
-                        <p class="description-2"><span class ="text-bold">Wheat</span></br></p>
-                    </div>
-                </div>
-                
-                <div class="d-flex flex-row justify-content-center">
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-8-Modal" id="book">
-                        Buy
-                    </button>
-                </div>
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="mentor-8-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">
-                                <div class="text-center mr-3">
-                                    <p class="description-2"><span class ="text-bold">Wheat</span></p>
-                                </div>
-                            </h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="d-flex flex-row justify-content-start">
-                                <img src="./images/wheat.jpeg" class="mentor-img shadow ml-3 mb-3"/>
-                            </div>
-                            <p class="text-bold">Price</p>
-                            <li class="description-2">Rs. 65 per KG</li>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary">
-                                <a class= "text-white" href="./login/login.html">Buy</a>
-                            </button>
-                        </div>
-                        </div>
-                    </div>
-                    </div>
-            </div>
-            <div class="mentor-card shadow p-3 ml-3  mb-3 mt-5">
-                <div class="outer">
-                    <img src="./images/paddy.jpeg" class="mentor-img shadow mb-3"/>
-                    <div class="text-center">
-                        <p class="description-2"><span class ="text-bold">Paddy</span></br></p>
+                        <p class="description-2"><span class ="text-bold">Excavators</span></br></p>
                     </div>
                 </div>
                 
@@ -595,7 +493,55 @@
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">
                                 <div class="text-center mr-3">
-                                    <p class="description-2"><span class ="text-bold">Paddy</span></p>
+                                    <p class="description-2"><span class ="text-bold">Excavators</span></p>
+                                </div>
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex flex-row justify-content-center">
+                                <img src="Machineries/Excavators.jpeg" class="mentor-img shadow ml-3 mb-3"/>
+                            </div>
+                            <p class="text-bold">Price</p>
+                            <li class="description-2">₹7999</li>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">
+                                <a class= "text-white" href="./login/login.html">Buy</a>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+        <div class="d-flex flex-row justify-content-center mb-5">
+            
+            <div class="mentor-card shadow p-3 ml-3 mb-3">
+                <div class="outer">
+                  <img src="./Machineries/Gas Snow Blower.jpeg" class="mentor-img shadow mb-3"/>
+                    <div class="text-center">
+                        <p class="description-2"><span class ="text-bold">Gas Snow Blower</span></p>
+                    </div>  
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center" id="book">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-11-Modal" >
+                        Buy
+                    </button>
+                </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="mentor-11-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                <div class="text-center mr-3">
+                                    <p class="description-2"><span class ="modal-heading">Gas Snow Blower</span></p>
                                 </div>
                             </h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -604,10 +550,326 @@
                         </div>
                         <div class="modal-body">
                             <div class="d-flex flex-row justify-content-start">
-                                <img src="./images/Channa.jpeg" class="mentor-img shadow ml-3 mb-3"/>
+                                <img src="./Machineries/Gas Snow Blower.jpeg" class="mentor-img shadow ml-3 mb-3"/>
                             </div>
                             <p class="text-bold">Price</p>
-                            <li class="description-2">Rs. 95 per KG</li>
+                            <li class="description-2">₹₹2.5 Lakh</li>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">
+                                <a class= "text-white" href="./login/login.html">Buy</a>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+            <div class="mentor-card shadow p-3 ml-3  mb-3">
+                <div class="outer">
+                    <img src="Machineries/Hydraulic Reversible Plough.jpeg" class="mentor-img shadow mb-3"/>
+                    <div class="text-center">
+                        <p class="description-2"><span class ="text-bold">Hydraulic Reversible Plough</span></br></p>
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-12-Modal" id="book">
+                        Buy
+                    </button>
+                </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="mentor-12-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                <div class="text-center mr-3">
+                                    <p class="description-2"><span class ="text-bold">Hydraulic Reversible Plough</span></p>
+                                </div>
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex flex-row justify-content-center">
+                                <img src="Machineries/Hydraulic Reversible Plough.jpeg" class="mentor-img shadow ml-3 mb-3"/>
+                            </div>
+                            <p class="text-bold">Price</p>
+                            <li class="description-2">₹20,000</li>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">
+                                <a class= "text-white" href="./login/login.html">Buy</a>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+            <div class="mentor-card shadow p-3 ml-3  mb-3">
+                <div class="outer">
+                    <img src="Machineries/JCB Bucket.jpeg" class="mentor-img shadow mb-3"/>
+                    <div class="text-center">
+                        <p class="description-2"><span class ="text-bold">JCB Bucket</span></p>
+                    </div> 
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-13-Modal" id="book">
+                        Buy
+                    </button>
+                </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="mentor-13-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                <div class="text-center mr-3">
+                                    <p class="description-2"><span class ="text-bold">JCB Bucket</span></p>
+                                </div>
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex flex-row justify-content-center">
+                                <img src="./Machineries/JCB Bucket.jpeg" class="mentor-img shadow ml-3 mb-3"/>
+                            </div>
+                            <p class="text-bold">Price</p>
+                            <li class="description-2">₹6000</li>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">
+                                <a class= "text-white" href="./login/login.html">Buy</a>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+            <div class="mentor-card shadow p-3 ml-3  mb-3">
+                <div class="outer">
+                    <img src="Machineries/Mini Combine Harvester.jpeg" class="mentor-img shadow mb-3"/>
+                    <div class="text-center">
+                        <p class="description-2"><span class ="text-bold">Mini Combine Harvester</span></br></p>
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-14-Modal" id="book">
+                        Buy
+                    </button>
+                </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="mentor-14-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                <div class="text-center mr-3">
+                                    <p class="description-2"><span class ="text-bold">Mini Combine Harvester</span></p>
+                                </div>
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex flex-row justify-content-center">
+                                <img src="Machineries/Mini Combine Harvester.jpeg" class="mentor-img shadow ml-3 mb-3"/>
+                            </div>
+                            <p class="text-bold">Price</p>
+                            <li class="description-2">₹11 Lakh</li>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">
+                                <a class= "text-white" href="./login/login.html">Buy</a>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+            <div class="mentor-card shadow p-3 ml-3  mb-3">
+                <div class="outer">
+                    <img src="Machineries/Mini Round Hay Baler.jpeg" class="mentor-img shadow mb-3"/>
+                    <div class="text-center">
+                        <p class="description-2"><span class ="text-bold">Mini Round Hay Baler</span></br></p>
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-15-Modal" id="book">
+                        Buy
+                    </button>
+                </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="mentor-15-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                <div class="text-center mr-3">
+                                    <p class="description-2"><span class ="text-bold">Mini Round Hay Baler</span></p>
+                                </div>
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex flex-row justify-content-center">
+                                <img src="Machineries/Mini Round Hay Baler.jpeg" class="mentor-img shadow ml-3 mb-3"/>
+                            </div>
+                            <p class="text-bold">Price</p>
+                            <li class="description-2">₹1.15 Lakh</li>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">
+                                <a class= "text-white" href="./login/login.html">Buy</a>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+        <div class="d-flex flex-row justify-content-center mb-5">
+            
+            <div class="mentor-card shadow p-3 ml-3  mb-3">
+                <div class="outer">
+                    <img src="Machineries/Mounted Disc Plough.jpeg" class="mentor-img shadow mb-3"/>
+                    <div class="text-center">
+                        <p class="description-2"><span class ="text-bold">Mounted Disc Plough</span></p>
+                    </div> 
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-16-Modal" id="book">
+                        Buy
+                    </button>
+                </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="mentor-16-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                <div class="text-center mr-3">
+                                    <p class="description-2"><span class ="text-bold">Mounted Disc Plough</span></p>
+                                </div>
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex flex-row justify-content-center">
+                                <img src="./Machineries/Mounted Disc Plough.jpeg" class="mentor-img shadow ml-3 mb-3"/>
+                            </div>
+                            <p class="text-bold">Price</p>
+                            <li class="description-2">₹23000</li>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">
+                                <a class= "text-white" href="./login/login.html">Rent</a>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+            <div class="mentor-card shadow p-3 ml-3  mb-3">
+                <div class="outer">
+                    <img src="Machineries/Potato Harvester.jpeg" class="mentor-img shadow mb-3"/>
+                    <div class="text-center">
+                        <p class="description-2"><span class ="text-bold">Potato Harvester</span></br></p>
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-17-Modal" id="book">
+                        Buy
+                    </button>
+                </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="mentor-17-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                <div class="text-center mr-3">
+                                    <p class="description-2"><span class ="text-bold">Potato Harvester</span></p>
+                                </div>
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex flex-row justify-content-center">
+                                <img src="Machineries/Potato Harvester.jpeg" class="mentor-img shadow ml-3 mb-3"/>
+                            </div>
+                            <p class="text-bold">Price</p>
+                            <li class="description-2">₹87000</li>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">
+                                <a class= "text-white" href="./login/login.html">Buy</a>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+            <div class="mentor-card shadow p-3 ml-3  mb-3">
+                <div class="outer">
+                    <img src="Machineries/Rice Mill Tractor.jpeg" class="mentor-img shadow mb-3"/>
+                    <div class="text-center">
+                        <p class="description-2"><span class ="text-bold">Rice Mill Tractor</span></br></p>
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-18-Modal" id="book">
+                        Buy
+                    </button>
+                </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="mentor-18-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                <div class="text-center mr-3">
+                                    <p class="description-2"><span class ="text-bold">Rice Mill Tractor</span></p>
+                                </div>
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex flex-row justify-content-center">
+                                <img src="Machineries/Rice Mill Tractor.jpeg" class="mentor-img shadow ml-3 mb-3"/>
+                            </div>
+                            <p class="text-bold">Price</p>
+                            <li class="description-2">₹20,000</li>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-primary">
@@ -620,168 +882,7 @@
             </div>
         </div>
         </div>
-        <div class="d-flex flex-row justify-content-center">
-            <h1 class="mentor-heading">Top Specialists :</h1>
-        </div>
-        <div class="d-flex flex-row justify-content-center mb-5">
-            
-            <div class="mentor-card shadow p-3 ml-3 mb-3 mt-5">
-                <div class="outer">
-                    <img src="images/danush.jpg" class="mentor-img shadow mb-3"/>
-                    <div class="text-center">
-                        <p class="description-2"><span class ="text-bold">Mr. Dhanush</span></p>
-                    </div>
-                </div>
-                
-                <div class="d-flex flex-row justify-content-center">
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-16-Modal" id="book">
-                        Hire
-                    </button>
-                </div>
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="mentor-16-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">
-                                <div class="text-center mr-3">
-                                    <p class="description-2"><span class ="text-bold">Mr. Dhanush</span></p>
-                                </div>
-                            </h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="d-flex flex-row justify-content-center">
-                                <img src="images/danush.jpg" class="mentor-img shadow ml-3 mb-3"/>
-                            </div>
-                            <p class="text-bold">About</p>
-                            <li class="description-2">20 Years of Experience</li>
-                            <li class="description-2">Experienced in Paddy Fields</li> 
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary">
-                                <a class= "text-white" href="./login/login.html">Hire</a>
-                            </button>
-                        </div>
-                        </div>
-                    </div>
-                    </div>
-            </div>
-            <div class="mentor-card shadow p-3 ml-3  mb-3 mt-5">
-                <div class="outer">
-                    <img src="images/faheem.jpg" class="mentor-img shadow mb-3"/>
-                    <div class="text-center">
-                        <p class="description-2"><span class ="text-bold">Dr. Faheem</span></br></p>
-                    </div>
-                </div>
-                
-                <div class="d-flex flex-row justify-content-center">
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-17-Modal" id="book">
-                        Hire
-                    </button>
-                </div>
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="mentor-17-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">
-                                <div class="text-center mr-3">
-                                    <p class="description-2"><span class ="text-bold">Dr. Faheem</span></p>
-                                </div>
-                            </h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="d-flex flex-row justify-content-center">
-                                <img src="images/faheem.jpg" class="mentor-img shadow ml-3 mb-3"/>
-                            </div>
-                            <p class="text-bold">About</p>
-                            <li class="description-2">6+ years of expertise in various crops</li>
-                            <li class="description-2">from the lands of madurai</li>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary">
-                                <a class= "text-white" href="./login/login.html">Hire</a>
-                            </button>
-                        </div>
-                        </div>
-                    </div>
-                    </div>
-            </div>
-            <div class="mentor-card shadow p-3 ml-3  mb-3 mt-5">
-                <div class="outer">
-                    <img src="images/leelavathi.jpg" class="mentor-img shadow mb-3"/>
-                    <div class="text-center">
-                        <p class="description-2"><span class ="text-bold">Mrs. Leelavathi</span></p>
-                    </div> 
-                </div>
-                
-                <div class="d-flex flex-row justify-content-center">
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-18-Modal" id="book">
-                        Hire
-                    </button>
-                </div>
-                    <!-- Modal -->
-                    <div class="modal fade" id="mentor-18-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">
-                                <div class="text-center mr-3">
-                                    <p class="description-2"><span class ="text-bold">Mrs. Leelavathi</span></p>
-                                </div>
-                            </h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="d-flex flex-row justify-content-center">
-                                <img src="images/leelavathi.jpg" class="mentor-img shadow ml-3 mb-3"/>
-                            </div>
-                            <p class="text-bold">About</p>
-                            <li class="description-2"> 15 Years of Experience</li>
-                            <li class="description-2">Specializes in Organic Farming</li>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary">
-                                <a class= "text-white" href="./login/login.html">Hire</a>
-                            </button>
-                        </div>
-                        </div>
-                    </div>
-                    </div>
-            </div>
-        </div> 
-
-    <div class="contact-us-bg" id="contact-us">
-        <div class="d-flex flex-row justify-content-center pt-5 mb-3">
-            <h1 class="main-heading text-white">Contact Us</h1></br>
-        </div>
-        <div class="d-flex flex-row justify-content-center mb-3">
-            <img src="https://i.postimg.cc/ry3M10jS/Hackathon-logo-3.png" style="width: 130px; cursor: pointer;" />
-        </div>
-        <div class="text-center pb-3">
-            <h1 class="main-heading text-white">UZHAVAN SYNC</h1>
-            <div class="d-flex flex-row justify-content-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-envelope text-white mr-3" viewBox="0 0 16 16">
-                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
-            </svg>
-            <p class="description text-white"><a href="mailto:menteeconnect.hackathon@gmail.com" style="text-decoration: none; color: white;">Contact</a></p>
-        </div>
-        </div>
     </div>
-
-      
-      
+    
+    
 </body>

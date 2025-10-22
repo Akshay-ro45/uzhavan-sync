@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=egde">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="https://i.postimg.cc/ry3M10jS/Hackathon-logo-3.png">
+    <link rel="stylesheet" href="Hire-Specialists.css">
+    <title>Uzhavan Sync</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"/>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"/> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"/>
+    <script src="./dashboard/dashboard-farmer.js"></script>
+</head>
+<body id="body-pd">
+    <header class="header" id="header">
+        <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+        
+    </header>
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <div> <a href="#" class="nav_logo" style="text-decoration:none;"> <img src="https://i.postimg.cc/CLxSGK1v/Hackathon-logo-3.png" class="img-logo" /> <span class="nav_logo-name">
+                UZHAVAN SYNC
+            </span> </a>
+                <div class="nav_list"> 
+                    <a href="#profile" class="nav_link" style="text-decoration:none;"> <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="" style="width:27px; height:27px; border-radius:15px">  <span class="nav_name">Profile</span> </a>
+
+                    <a href="#mentor-container" class="nav_link active" style="text-decoration:none;"> <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+                    </svg> <span class="nav_name">Search Mentors</span></a> 
+                  
+                    <a href="#" id="Upcoming-Slots" class="nav_link" style="text-decoration:none;" onclick="UpcomingSlots()"> <svg xmlns="http://www.w3.org/2000/svg"  width="25" height="25" fill="currentColor" class="bi bi-app-indicator" viewBox="0 0 16 16">
+                    <path d="M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5V8a.5.5 0 0 1 1 0v2.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 1 10.5v-5A4.5 4.5 0 0 1 5.5 1H8a.5.5 0 0 1 0 1z"/><path d="M16 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                    </svg> <span class="nav_name">Upcoming Slots</span> </a> 
+                    
+                    <a href="#" id="Join-session" class="nav_link" style="text-decoration:none;" onclick="UpcomingSlots2()"> <svg xmlns="http://www.w3.org/2000/svg"  width="25" height="25" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
+                    </svg> <span class="nav_name">Join Session</span> </a> 
+                    
+                    <a href="./videocall.html" id="Meet-your-mentor" class="nav_link" style="text-decoration:none;"> <svg xmlns="http://www.w3.org/2000/svg"  width="25" height="25" fill="currentColor" class="bi bi-camera-video-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2z"/>
+                    </svg> <span class="nav_name">Meet Your Mentor</span> </a> 
+                    
+                    <a href="#" id="Chat-with-mentor" class="nav_link" style="text-decoration:none;" onclick="UpcomingSlots4()"> <svg xmlns="http://www.w3.org/2000/svg"  width="25" height="25" fill="currentColor" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
+                    <path d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                  </svg> <span class="nav_name">Chat With Mentor</span> </a> 
+                
+                  <a href="./notes.html" id="Join-session" class="nav_link" style="text-decoration:none;"> <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-card-heading" viewBox="0 0 16 16">
+                    <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"/>
+                    <path d="M3 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5m0-5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5z"/>
+                  </svg> <span class="nav_name">Notes</span> </a>
+
+                </div>
+            </div> 
+    </div>
+    <div id="mentor-container" class="bg-image-2">
+        <div class="d-flex flex-row justify-content-center pt-5">
+            <h1 class="mentor-heading">Fertilizers:</h1>
+        </div>
+        <div class="d-flex flex-row justify-content-center">
+            <div class="mentor-card shadow p-3 ml-3 mb-5">
+                <div class="outer">
+                  <img src="https://sist.sathyabama.ac.in/staffPhotos/5701.jpg" class="mentor-img shadow mb-3"/>
+                    <div class="text-center">
+                        <p class="description-2"><span class ="text-bold">Dr. T. Sasipraba</span></br>
+                        Professor</p>
+                    </div>  
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center" id="book">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-1-Modal" >
+                        Buy
+                    </button>
+                </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="mentor-1-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                <div class="text-center mr-3">
+                                    <p class="description-2"><span class ="modal-heading">Dr. T. Sasipraba</span></p>
+                                </div>
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex flex-row justify-content-start">
+                                <img src="https://sist.sathyabama.ac.in/staffPhotos/5701.jpg" class="mentor-img shadow ml-3 mb-3"/>
+                                <div class="mentor-rating">
+                                    <p class="description-2 pt-3">Rating:</p>
+                                    <img src="https://i.postimg.cc/7LDF3BZS/Set-of-Review-Stars.jpg" class="mentor-rating-img"/>
+                                </div>
+                            </div>
+                            <p class="text-bold">Skill Set</p>
+                            <li class="description-2">QoS in Wireless Networks</li>
+                            <li class="description-2">Sensor enabled Web Services</li>
+                            <li class="description-2">Predictive Data Analysis</li>
+                            <li class="description-2">Decision Support System</li>
+                            <li class="description-2">Distributed Data Mining</li>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">
+                                <a class= "text-white" href="./login/login.html">Buy</a>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+            <div class="mentor-card shadow p-3 ml-3 mb-5">
+                <div class="outer">
+                    <img src="https://sist.sathyabama.ac.in/staffPhotos/5201.jpg" class="mentor-img shadow mb-3"/>
+                    <div class="text-center">
+                        <p class="description-2"><span class ="text-bold">Dr.T.Sasikala</span></br>
+                        Professor</p>
+                    </div>  
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center" id="book">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-2-Modal">
+                        Buy
+                    </button>
+                </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="mentor-2-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                <div class="text-center mr-3">
+                                    <p class="description-2"><span class ="text-bold">Dr.T.Sasikala</span></p>
+                                </div>
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex flex-row justify-content-start">
+                                <img src="https://sist.sathyabama.ac.in/staffPhotos/5201.jpg" class="mentor-img shadow ml-3 mb-3"/>
+                                <div class="mentor-rating">
+                                    <p class="description-2 pt-3">Rating:</p>
+                                    <img src="https://i.postimg.cc/7LDF3BZS/Set-of-Review-Stars.jpg" class="mentor-rating-img"/>
+                                </div>
+                            </div>
+                            <p class="text-bold">Skill Set</p>
+                            <li class="description-2">COMPUTER NETWORKS</li>
+                            <li class="description-2">NETWORK SECURITY</li>
+                            <li class="description-2">WIRELESS NETWORKS</li>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">
+                                <a class= "text-white" href="./login/login.html">Buy</a>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+            <div class="mentor-card shadow p-3 ml-3 mb-5">
+                <div class="outer">
+                    <img src="https://sist.sathyabama.ac.in/staffPhotos/5219.jpg" class="mentor-img shadow mb-3"/>
+                    <div class="text-center">
+                        <p class="description-2"><span class ="text-bold">Dr.S.Vigneshwari</span></br>
+                        Professor</p>
+                    </div>
+                </div>
+                <div class="d-flex flex-row justify-content-center" id="book">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-3-Modal">
+                        Buy
+                    </button>
+                </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="mentor-3-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                <div class="text-center mr-3">
+                                    <p class="description-2"><span class ="text-bold">Dr.S.Vigneshwari</span></p>
+                                </div>
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex flex-row justify-content-start">
+                                <img src="https://sist.sathyabama.ac.in/staffPhotos/5219.jpg" class="mentor-img shadow ml-3 mb-3"/>
+                                <div class="mentor-rating">
+                                    <p class="description-2 pt-3">Rating:</p>
+                                    <img src="https://i.postimg.cc/ZKZZFFKP/Set-of-Review-Stars-2.jpg" class="mentor-rating-img"/>
+                                </div>
+                            </div>
+                            <p class="text-bold">Skill Set</p>
+                            <li class="description-2">Web Mining</li>
+                            <li class="description-2">Semantic Technologies</li>
+                            <li class="description-2">Image processing</li>
+                            <li class="description-2">Internet of Things</li>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">
+                                <a class= "text-white" href="./login/login.html">Buy</a>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+            <div class="mentor-card shadow p-3 ml-3 mb-5">
+                <div class="outer">
+                    <img src="https://sist.sathyabama.ac.in/staffPhotos/5207.jpg" class="mentor-img shadow mb-3"/>
+                    <div class="text-center">
+                        <p class="description-2"><span class ="text-bold">Dr.A.Mary posonia</span></br>
+                        Professor</p>
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-4-Modal" id="book">
+                        Buy
+                    </button>
+                </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="mentor-4-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                <div class="text-center mr-3">
+                                    <p class="description-2"><span class ="text-bold">Dr.S.Vigneshwari</span></p>
+                                </div>
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex flex-row justify-content-start">
+                                <img src="https://sist.sathyabama.ac.in/staffPhotos/5207.jpg" class="mentor-img shadow ml-3 mb-3"/>
+                                <div class="mentor-rating">
+                                    <p class="description-2 pt-3">Rating:</p>
+                                    <img src="https://i.postimg.cc/7LDF3BZS/Set-of-Review-Stars.jpg" class="mentor-rating-img"/>
+                                </div>
+                            </div>
+                            <p class="text-bold">Skill Set</p>
+                            <li class="description-2">Big Data</li>
+                            <li class="description-2">Internet of Things</li>
+                            <li class="description-2">Data Mining</li>
+                            <li class="description-2">Machine Learning</li>
+                            <li class="description-2">Networking</li>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">
+                                <a class= "text-white" href="./login/login.html">Buy</a>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+            <div class="mentor-card shadow p-3 ml-3 mb-5">
+                <div class="outer">
+                    <img src="https://sist.sathyabama.ac.in/staffPhotos/5229.jpg" class="mentor-img shadow mb-3"/>
+                    <div class="text-center">
+                        <p class="description-2"><span class ="text-bold">Dr.L.K.Joshila Grace</span></br>
+                        Professor</p>
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-5-Modal" id="book">
+                        Buy
+                    </button>
+                </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="mentor-5-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                <div class="text-center mr-3">
+                                    <p class="description-2"><span class ="text-bold">Dr.L.K.Joshila Grace</span></p>
+                                </div>
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex flex-row justify-content-start">
+                                <img src="https://sist.sathyabama.ac.in/staffPhotos/5229.jpg" class="mentor-img shadow ml-3 mb-3"/>
+                                <div class="mentor-rating">
+                                    <p class="description-2 pt-3">Rating:</p>
+                                    <img src="https://i.postimg.cc/ZKZZFFKP/Set-of-Review-Stars-2.jpg" class="mentor-rating-img"/>
+                                </div>
+                            </div>
+                            <p class="text-bold">Skill Set</p>
+                            <li class="description-2">Web Mining</li>
+                            <li class="description-2">Data Mining</li>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-Modal-8">
+                                <a class= "text-white" href="./login/login.html">Buy</a>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+        <div class="d-flex flex-row justify-content-center mb-5">
+            
+            <div class="mentor-card shadow p-3 ml-3 mb-3 mt-5">
+                <div class="outer">
+                    <img src="https://i.postimg.cc/vBQNDPzs/Whats-App-Image-2024-09-09-at-7-30-50-PM.jpg" class="mentor-img shadow mb-3"/>
+                    <div class="text-center">
+                        <p class="description-2"><span class ="text-bold">Prof. Rohit Budhiraja</span></p>
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-6-Modal" id="book">
+                        Buy
+                    </button>
+                </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="mentor-6-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                <div class="text-center mr-3">
+                                    <p class="description-2"><span class ="text-bold">Prof. Rohit Budhiraja</span></p>
+                                </div>
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex flex-row justify-content-start">
+                                <img src="https://i.postimg.cc/vBQNDPzs/Whats-App-Image-2024-09-09-at-7-30-50-PM.jpg" class="mentor-img shadow ml-3 mb-3"/>
+                                <div class="mentor-rating">
+                                    <p class="description-2 pt-3">Rating:</p>
+                                    <img src="https://i.postimg.cc/ZKZZFFKP/Set-of-Review-Stars-2.jpg" class="mentor-rating-img"/>
+                                </div>
+                            </div>
+                            <p class="text-bold">Skill Set</p>
+                            <li class="description-2">5G/6G Network Design</li>
+                            <li class="description-2"> Massive MIMO Systems</li>
+                            <li class="description-2">Machine Learning and Optimization</li>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">
+                                <a class= "text-white" href="./login/login.html">Buy</a>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+            <div class="mentor-card shadow p-3 ml-3  mb-3 mt-5">
+                <div class="outer">
+                    <img src="https://i.postimg.cc/T1T0thSv/Whats-App-Image-2024-09-09-at-7-33-17-PM.jpg" class="mentor-img shadow mb-3"/>
+                    <div class="text-center">
+                        <p class="description-2"><span class ="text-bold">Prof. Rajiv Misra</span></br></p>
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-7-Modal" id="book">
+                        Buy
+                    </button>
+                </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="mentor-7-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                <div class="text-center mr-3">
+                                    <p class="description-2"><span class ="text-bold">Prof. Rajiv Misra</span></p>
+                                </div>
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex flex-row justify-content-start">
+                                <img src="https://i.postimg.cc/T1T0thSv/Whats-App-Image-2024-09-09-at-7-33-17-PM.jpg" class="mentor-img shadow ml-3 mb-3"/>
+                                <div class="mentor-rating">
+                                    <p class="description-2 pt-3">Rating:</p>
+                                    <img src="https://i.postimg.cc/x8XmsDP7/Set-of-Review-Stars-3.jpg" class="mentor-rating-img"/>
+                                </div>
+                            </div>
+                            <p class="text-bold">Skill Set</p>
+                            <li class="description-2">Distributed Algorithms</li>
+                            <li class="description-2">Cloud Computing</li>
+                            <li class="description-2">Wireless Networks</li>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">
+                                <a class= "text-white" href="./login/login.html">Buy</a>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+            <div class="mentor-card shadow p-3 ml-3  mb-3 mt-5">
+                <div class="outer">
+                    <img src="https://i.postimg.cc/288Tvbh4/Whats-App-Image-2024-09-09-at-7-34-29-PM.jpg" class="mentor-img shadow mb-3"/>
+                    <div class="text-center">
+                        <p class="description-2"><span class ="text-bold">Prof. Partha Pratim Das</span></p>
+                    </div> 
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-8-Modal" id="book">
+                        Buy
+                    </button>
+                </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="mentor-8-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                <div class="text-center mr-3">
+                                    <p class="description-2"><span class ="text-bold">Prof. Partha Pratim Das</span></p>
+                                </div>
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex flex-row justify-content-start">
+                                <img src="https://i.postimg.cc/288Tvbh4/Whats-App-Image-2024-09-09-at-7-34-29-PM.jpg" class="mentor-img shadow ml-3 mb-3"/>
+                                <div class="mentor-rating">
+                                    <p class="description-2 pt-3">Rating:</p>
+                                    <img src="https://i.postimg.cc/x8XmsDP7/Set-of-Review-Stars-3.jpg" class="mentor-rating-img"/>
+                                </div>
+                            </div>
+                            <p class="text-bold">Skill Set</p>
+                            <li class="description-2"> Software Engineering</li>
+                            <li class="description-2">Object-Oriented Systems</li>
+                            <li class="description-2">Software Engineering</li>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">
+                                <a class= "text-white" href="./login/login.html">Buy</a>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+            <div class="mentor-card shadow p-3 ml-3  mb-3 mt-5">
+                <div class="outer">
+                    <img src="https://i.postimg.cc/NfYktyp3/Whats-App-Image-2024-09-09-at-8-05-23-PM.jpg" class="mentor-img shadow mb-3"/>
+                    <div class="text-center">
+                        <p class="description-2"><span class ="text-bold">Prof. M. K. Bhuyan</span>
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-8-Modal" id="book">
+                        Buy
+                    </button>
+                </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="mentor-8-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                <div class="text-center mr-3">
+                                    <p class="description-2"><span class ="text-bold">Prof. M. K. Bhuyan</span></p>
+                                </div>
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex flex-row justify-content-start">
+                                <img src="https://i.postimg.cc/NfYktyp3/Whats-App-Image-2024-09-09-at-8-05-23-PM.jpg" class="mentor-img shadow ml-3 mb-3"/>
+                                <div class="mentor-rating">
+                                    <p class="description-2 pt-3">Rating:</p>
+                                    <img src="https://i.postimg.cc/x8XmsDP7/Set-of-Review-Stars-3.jpg" class="mentor-rating-img"/>
+                                </div>
+                            </div>
+                            <p class="text-bold">Skill Set</p>
+                            <li class="description-2">Biomedical Signal Processing</li>
+                            <li class="description-2">Machine Learning and Artificial Intelligence</li>
+                            <li class="description-2">Image/Video Processing</li>
+                            
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-Modal-16">
+                                <a class= "text-white" href="./login/login.html">Buy</a>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+            <div class="mentor-card shadow p-3 ml-3  mb-3 mt-5">
+                <div class="outer">
+                    <img src="https://i.postimg.cc/fb3xCYR9/Whats-App-Image-2024-09-09-at-8-16-55-PM.jpg" class="mentor-img shadow mb-3"/>
+                    <div class="text-center">
+                        <p class="description-2"><span class ="text-bold">Prof. Dilip Kumar Pratihar</span>
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-8-Modal" id="book">
+                        Buy
+                    </button>
+                </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="mentor-8-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                <div class="text-center mr-3">
+                                    <p class="description-2"><span class ="text-bold">Prof. Dilip Kumar Pratihar</span></p>
+                                </div>
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex flex-row justify-content-start">
+                                <img src="https://i.postimg.cc/fb3xCYR9/Whats-App-Image-2024-09-09-at-8-16-55-PM.jpg" class="mentor-img shadow ml-3 mb-3"/>
+                                <div class="mentor-rating">
+                                    <p class="description-2 pt-3">Rating:</p>
+                                    <img src="https://i.postimg.cc/x8XmsDP7/Set-of-Review-Stars-3.jpg" class="mentor-rating-img"/>
+                                </div>
+                            </div>
+                            <p class="text-bold">Skill Set</p>
+                            <li class="description-2">Robotics</li>
+                            <li class="description-2">Soft Computing</li>
+                            <li class="description-2">Analytical engineering mechanism</li>
+                            <li class="description-2">Artificial intelligence</li>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">
+                                <a class= "text-white" href="./login/login.html">Buy</a>
+                            </button>   
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+        <div class="d-flex flex-row justify-content-center mb-5">
+            
+            <div class="mentor-card shadow p-3 ml-3 mb-3 mt-5">
+                <div class="outer">
+                    <img src="https://i.postimg.cc/vBQNDPzs/Whats-App-Image-2024-09-09-at-7-30-50-PM.jpg" class="mentor-img shadow mb-3"/>
+                    <div class="text-center">
+                        <p class="description-2"><span class ="text-bold">Prof. Rohit Budhiraja</span></p>
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-11-Modal" id="book">
+                        Buy
+                    </button>
+                </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="mentor-11-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                <div class="text-center mr-3">
+                                    <p class="description-2"><span class ="text-bold">Prof. Rohit Budhiraja</span></p>
+                                </div>
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex flex-row justify-content-start">
+                                <img src="https://i.postimg.cc/vBQNDPzs/Whats-App-Image-2024-09-09-at-7-30-50-PM.jpg" class="mentor-img shadow ml-3 mb-3"/>
+                                <div class="mentor-rating">
+                                    <p class="description-2 pt-3">Rating:</p>
+                                    <img src="https://i.postimg.cc/ZKZZFFKP/Set-of-Review-Stars-2.jpg" class="mentor-rating-img"/>
+                                </div>
+                            </div>
+                            <p class="text-bold">Skill Set</p>
+                            <li class="description-2">5G/6G Network Design</li>
+                            <li class="description-2"> Massive MIMO Systems</li>
+                            <li class="description-2">Machine Learning and Optimization</li>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">
+                                <a class= "text-white" href="./login/login.html">Buy</a>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+            <div class="mentor-card shadow p-3 ml-3  mb-3 mt-5">
+                <div class="outer">
+                    <img src="https://i.postimg.cc/T1T0thSv/Whats-App-Image-2024-09-09-at-7-33-17-PM.jpg" class="mentor-img shadow mb-3"/>
+                    <div class="text-center">
+                        <p class="description-2"><span class ="text-bold">Prof. Rajiv Misra</span></br></p>
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-12-Modal" id="book">
+                        Buy
+                    </button>
+                </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="mentor-12-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                <div class="text-center mr-3">
+                                    <p class="description-2"><span class ="text-bold">Prof. Rajiv Misra</span></p>
+                                </div>
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex flex-row justify-content-start">
+                                <img src="https://i.postimg.cc/T1T0thSv/Whats-App-Image-2024-09-09-at-7-33-17-PM.jpg" class="mentor-img shadow ml-3 mb-3"/>
+                                <div class="mentor-rating">
+                                    <p class="description-2 pt-3">Rating:</p>
+                                    <img src="https://i.postimg.cc/x8XmsDP7/Set-of-Review-Stars-3.jpg" class="mentor-rating-img"/>
+                                </div>
+                            </div>
+                            <p class="text-bold">Skill Set</p>
+                            <li class="description-2">Distributed Algorithms</li>
+                            <li class="description-2">Cloud Computing</li>
+                            <li class="description-2">Wireless Networks</li>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">
+                                <a class= "text-white" href="./login/login.html">Buy</a>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+            <div class="mentor-card shadow p-3 ml-3  mb-3 mt-5">
+                <div class="outer">
+                    <img src="https://i.postimg.cc/288Tvbh4/Whats-App-Image-2024-09-09-at-7-34-29-PM.jpg" class="mentor-img shadow mb-3"/>
+                    <div class="text-center">
+                        <p class="description-2"><span class ="text-bold">Prof. Partha Pratim Das</span></p>
+                    </div> 
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-13-Modal" id="book">
+                        Buy
+                    </button>
+                </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="mentor-13-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                <div class="text-center mr-3">
+                                    <p class="description-2"><span class ="text-bold">Prof. Partha Pratim Das</span></p>
+                                </div>
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex flex-row justify-content-start">
+                                <img src="https://i.postimg.cc/288Tvbh4/Whats-App-Image-2024-09-09-at-7-34-29-PM.jpg" class="mentor-img shadow ml-3 mb-3"/>
+                                <div class="mentor-rating">
+                                    <p class="description-2 pt-3">Rating:</p>
+                                    <img src="https://i.postimg.cc/x8XmsDP7/Set-of-Review-Stars-3.jpg" class="mentor-rating-img"/>
+                                </div>
+                            </div>
+                            <p class="text-bold">Skill Set</p>
+                            <li class="description-2"> Software Engineering</li>
+                            <li class="description-2">Object-Oriented Systems</li>
+                            <li class="description-2">Software Engineering</li>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">
+                                <a class= "text-white" href="./login/login.html">Buy</a>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+            <div class="mentor-card shadow p-3 ml-3  mb-3 mt-5">
+                <div class="outer">
+                    <img src="https://i.postimg.cc/NfYktyp3/Whats-App-Image-2024-09-09-at-8-05-23-PM.jpg" class="mentor-img shadow mb-3"/>
+                    <div class="text-center">
+                        <p class="description-2"><span class ="text-bold">Prof. M. K. Bhuyan</span>
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-14-Modal" id="book">
+                        Buy
+                    </button>
+                </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="mentor-14-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                <div class="text-center mr-3">
+                                    <p class="description-2"><span class ="text-bold">Prof. M. K. Bhuyan</span></p>
+                                </div>
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex flex-row justify-content-start">
+                                <img src="https://i.postimg.cc/NfYktyp3/Whats-App-Image-2024-09-09-at-8-05-23-PM.jpg" class="mentor-img shadow ml-3 mb-3"/>
+                                <div class="mentor-rating">
+                                    <p class="description-2 pt-3">Rating:</p>
+                                    <img src="https://i.postimg.cc/x8XmsDP7/Set-of-Review-Stars-3.jpg" class="mentor-rating-img"/>
+                                </div>
+                            </div>
+                            <p class="text-bold">Skill Set</p>
+                            <li class="description-2">Biomedical Signal Processing</li>
+                            <li class="description-2">Machine Learning and Artificial Intelligence</li>
+                            <li class="description-2">Image/Video Processing</li>
+                            
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-Modal-16">
+                                <a class= "text-white" href="./login/login.html">Buy</a>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+            <div class="mentor-card shadow p-3 ml-3  mb-3 mt-5">
+                <div class="outer">
+                    <img src="https://i.postimg.cc/fb3xCYR9/Whats-App-Image-2024-09-09-at-8-16-55-PM.jpg" class="mentor-img shadow mb-3"/>
+                    <div class="text-center">
+                        <p class="description-2"><span class ="text-bold">Prof. Dilip Kumar Pratihar</span>
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-15-Modal" id="book">
+                        Buy
+                    </button>
+                </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="mentor-15-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                <div class="text-center mr-3">
+                                    <p class="description-2"><span class ="text-bold">Prof. Dilip Kumar Pratihar</span></p>
+                                </div>
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex flex-row justify-content-start">
+                                <img src="https://i.postimg.cc/fb3xCYR9/Whats-App-Image-2024-09-09-at-8-16-55-PM.jpg" class="mentor-img shadow ml-3 mb-3"/>
+                                <div class="mentor-rating">
+                                    <p class="description-2 pt-3">Rating:</p>
+                                    <img src="https://i.postimg.cc/x8XmsDP7/Set-of-Review-Stars-3.jpg" class="mentor-rating-img"/>
+                                </div>
+                            </div>
+                            <p class="text-bold">Skill Set</p>
+                            <li class="description-2">Robotics</li>
+                            <li class="description-2">Soft Computing</li>
+                            <li class="description-2">Analytical engineering mechanism</li>
+                            <li class="description-2">Artificial intelligence</li>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">
+                                <a class= "text-white" href="./login/login.html">Buy</a>
+                            </button>   
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+        <div class="d-flex flex-row justify-content-center mb-5">
+            
+            <div class="mentor-card shadow p-3 ml-3 mb-3 mt-5">
+                <div class="outer">
+                    <img src="https://i.postimg.cc/vBQNDPzs/Whats-App-Image-2024-09-09-at-7-30-50-PM.jpg" class="mentor-img shadow mb-3"/>
+                    <div class="text-center">
+                        <p class="description-2"><span class ="text-bold">Prof. Rohit Budhiraja</span></p>
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-16-Modal" id="book">
+                        Buy
+                    </button>
+                </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="mentor-16-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                <div class="text-center mr-3">
+                                    <p class="description-2"><span class ="text-bold">Prof. Rohit Budhiraja</span></p>
+                                </div>
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex flex-row justify-content-start">
+                                <img src="https://i.postimg.cc/vBQNDPzs/Whats-App-Image-2024-09-09-at-7-30-50-PM.jpg" class="mentor-img shadow ml-3 mb-3"/>
+                                <div class="mentor-rating">
+                                    <p class="description-2 pt-3">Rating:</p>
+                                    <img src="https://i.postimg.cc/ZKZZFFKP/Set-of-Review-Stars-2.jpg" class="mentor-rating-img"/>
+                                </div>
+                            </div>
+                            <p class="text-bold">Skill Set</p>
+                            <li class="description-2">5G/6G Network Design</li>
+                            <li class="description-2"> Massive MIMO Systems</li>
+                            <li class="description-2">Machine Learning and Optimization</li>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">
+                                <a class= "text-white" href="./login/login.html">Buy</a>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+            <div class="mentor-card shadow p-3 ml-3  mb-3 mt-5">
+                <div class="outer">
+                    <img src="https://i.postimg.cc/T1T0thSv/Whats-App-Image-2024-09-09-at-7-33-17-PM.jpg" class="mentor-img shadow mb-3"/>
+                    <div class="text-center">
+                        <p class="description-2"><span class ="text-bold">Prof. Rajiv Misra</span></br></p>
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-17-Modal" id="book">
+                        Buy
+                    </button>
+                </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="mentor-17-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                <div class="text-center mr-3">
+                                    <p class="description-2"><span class ="text-bold">Prof. Rajiv Misra</span></p>
+                                </div>
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex flex-row justify-content-start">
+                                <img src="https://i.postimg.cc/T1T0thSv/Whats-App-Image-2024-09-09-at-7-33-17-PM.jpg" class="mentor-img shadow ml-3 mb-3"/>
+                                <div class="mentor-rating">
+                                    <p class="description-2 pt-3">Rating:</p>
+                                    <img src="https://i.postimg.cc/x8XmsDP7/Set-of-Review-Stars-3.jpg" class="mentor-rating-img"/>
+                                </div>
+                            </div>
+                            <p class="text-bold">Skill Set</p>
+                            <li class="description-2">Distributed Algorithms</li>
+                            <li class="description-2">Cloud Computing</li>
+                            <li class="description-2">Wireless Networks</li>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">
+                                <a class= "text-white" href="./login/login.html">Buy</a>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+            <div class="mentor-card shadow p-3 ml-3  mb-3 mt-5">
+                <div class="outer">
+                    <img src="https://i.postimg.cc/288Tvbh4/Whats-App-Image-2024-09-09-at-7-34-29-PM.jpg" class="mentor-img shadow mb-3"/>
+                    <div class="text-center">
+                        <p class="description-2"><span class ="text-bold">Prof. Partha Pratim Das</span></p>
+                    </div> 
+                </div>
+                
+                <div class="d-flex flex-row justify-content-center">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mentor-18-Modal" id="book">
+                        Buy
+                    </button>
+                </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="mentor-18-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                <div class="text-center mr-3">
+                                    <p class="description-2"><span class ="text-bold">Prof. Partha Pratim Das</span></p>
+                                </div>
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex flex-row justify-content-start">
+                                <img src="https://i.postimg.cc/288Tvbh4/Whats-App-Image-2024-09-09-at-7-34-29-PM.jpg" class="mentor-img shadow ml-3 mb-3"/>
+                                <div class="mentor-rating">
+                                    <p class="description-2 pt-3">Rating:</p>
+                                    <img src="https://i.postimg.cc/x8XmsDP7/Set-of-Review-Stars-3.jpg" class="mentor-rating-img"/>
+                                </div>
+                            </div>
+                            <p class="text-bold">Skill Set</p>
+                            <li class="description-2"> Software Engineering</li>
+                            <li class="description-2">Object-Oriented Systems</li>
+                            <li class="description-2">Software Engineering</li>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">
+                                <a class= "text-white" href="./login/login.html">Buy</a>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+    
+</body>
