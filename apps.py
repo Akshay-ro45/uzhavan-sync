@@ -1,14 +1,15 @@
+from __future__ import annotations
+
 from django.apps import AppConfig
-import os
-from .views import train_nlp_model
+from django.core.checks import Tags
+from django.core.checks import register
 
-class BotAppConfig(AppConfig):
-    default_auto_field = 'django.db.models.BigAutoField'
-    name = 'bot_app'
+from corsheaders.checks import check_settings
 
-    def ready(self):
-        model_path = 'model/trained_model'
-        if not os.path.exists(model_path):
-            print("Training NLP model....")
-            train_nlp_model()
-            print("Model training completed.")
+
+class CorsHeadersAppConfig(AppConfig):
+    name = "corsheaders"
+    verbose_name = "django-cors-headers"
+
+    def ready(self) -> None:
+        register(Tags.security)(check_settings)
